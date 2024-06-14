@@ -63,3 +63,11 @@ def index():
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
+@app.post("/present")
+async def exchange_present(present):
+    return_present = "🍦🍧🍨🍩🍪🥠🎂🍰🥞🧁🥧🍫🍬🍭🍮🍯🍡";
+    return {
+        "response": f"サーバです。！ {present}ありがとう。お返しはお菓子詰め合わせセットです。",
+        "return-present": return_present
+    }
