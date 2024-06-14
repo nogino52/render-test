@@ -29,7 +29,24 @@ def omikuji():
         "小凶",
         "大凶"
     ]
-    return omikuji_list[random.randrange(10)]
+    omikuji_messages = [
+        "大吉！素晴らしい幸運が舞い込むでしょう。",
+        "中吉！努力が実を結び、良い結果が待っています。",
+        "小吉！ちょっとした幸運があなたの元にやってきます。",
+        "吉！安定した幸せな日々が続くでしょう。",
+        "半吉！まずまずの運勢です。良いことも悪いこともあります。",
+        "末吉！努力が実り始め、良い方向に進む時期です。",
+        "末小吉！運気が上向きになってきています。良いことが起こるかもしれません。",
+        "凶。悪いことが起こるかもしれませんが、気を引き締めてください。",
+        "小凶。注意が必要な日です。慎重に行動しましょう。",
+        "大凶。厳しい状況が訪れるかもしれませんが、乗り越えましょう。"
+    ]
+
+    omikuji_index = random.randrange(10);
+    return {
+        "result": omikuji_list[omikuji_index],
+        "message": omikuji_messages[omikuji_index]
+    }
 
 @app.get("/index")
 def index():
