@@ -27,5 +27,5 @@ def omikuji():
         "小凶",
         "大凶"
     ]
-
+    random = random.Random()
     return omikuji_list[random.randrange(10)]
